@@ -1,0 +1,1174 @@
+[
+  {
+    "title": "Final - T20 Championship 2026",
+    "matchType": "T20",
+    "totalOvers": 20,
+    "venue": "Melbourne Cricket Ground, Melbourne",
+    "date": "2026-09-28T16:50:00.000Z",
+    "status": "completed",
+    "statusNote": "Match scheduled",
+    "scoringRule": {
+      "customWideNoBall": true
+    },
+    "toss": {
+      "winner": "",
+      "decision": "",
+      "completedAt": null,
+      "liveAt": null
+    },
+    "team1": {
+      "name": "India",
+      "shortName": "IND",
+      "color": "#1e40af",
+      "logo": "",
+      "players": [
+        {
+          "name": "Rohit Sharma",
+          "role": "batter",
+          "isCaptain": true,
+          "isWicketKeeper": false,
+          "id": "t1_p_1_1790634043571"
+        },
+        {
+          "name": "Virat Kohli",
+          "role": "batter",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t1_p_2_1790634043571"
+        },
+        {
+          "name": "Suryakumar Yadav",
+          "role": "batter",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t1_p_3_1790634043571"
+        },
+        {
+          "name": "Rishabh Pant",
+          "role": "wicketkeeper",
+          "isCaptain": false,
+          "isWicketKeeper": true,
+          "id": "t1_p_4_1790634043571"
+        },
+        {
+          "name": "Hardik Pandya",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t1_p_5_1790634043571"
+        },
+        {
+          "name": "Shivam Dube",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t1_p_6_1790634043571"
+        },
+        {
+          "name": "Ravindra Jadeja",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t1_p_7_1790634043571"
+        },
+        {
+          "name": "Axar Patel",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t1_p_8_1790634043571"
+        },
+        {
+          "name": "Kuldeep Yadav",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t1_p_9_1790634043571"
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t1_p_10_1790634043571"
+        },
+        {
+          "name": "Arshdeep Singh",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t1_p_11_1790634043571"
+        }
+      ]
+    },
+    "team2": {
+      "name": "Australia",
+      "shortName": "AUS",
+      "color": "#eab308",
+      "logo": "",
+      "players": [
+        {
+          "name": "Travis Head",
+          "role": "batter",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t2_p_1_1790634043571"
+        },
+        {
+          "name": "David Warner",
+          "role": "batter",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t2_p_2_1790634043571"
+        },
+        {
+          "name": "Mitchell Marsh",
+          "role": "all_rounder",
+          "isCaptain": true,
+          "isWicketKeeper": false,
+          "id": "t2_p_3_1790634043571"
+        },
+        {
+          "name": "Glenn Maxwell",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t2_p_4_1790634043571"
+        },
+        {
+          "name": "Marcus Stoinis",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t2_p_5_1790634043571"
+        },
+        {
+          "name": "Tim David",
+          "role": "batter",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t2_p_6_1790634043571"
+        },
+        {
+          "name": "Matthew Wade",
+          "role": "wicketkeeper",
+          "isCaptain": false,
+          "isWicketKeeper": true,
+          "id": "t2_p_7_1790634043571"
+        },
+        {
+          "name": "Pat Cummins",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t2_p_8_1790634043571"
+        },
+        {
+          "name": "Mitchell Starc",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t2_p_9_1790634043571"
+        },
+        {
+          "name": "Adam Zampa",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t2_p_10_1790634043571"
+        },
+        {
+          "name": "Josh Hazlewood",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false,
+          "id": "t2_p_11_1790634043571"
+        }
+      ]
+    },
+    "innings": [],
+    "currentInningsIndex": 0,
+    "liveEvent": {
+      "type": "NONE",
+      "text": "",
+      "timestamp": "2026-09-28T22:20:43.571Z"
+    },
+    "_id": "05e14e2a-edfc-4589-93cb-8bebe595afb8",
+    "createdAt": "2026-09-28T22:20:43.576Z",
+    "updatedAt": "2026-09-28T22:21:10.170Z"
+  },
+  {
+    "title": "Semi-Final 1 - ICC Men’s T20 World Cup 2026",
+    "matchType": "T20",
+    "totalOvers": 20,
+    "venue": "Sydney Cricket Ground, Sydney",
+    "date": "2026-09-26T22:15:04.207Z",
+    "status": "completed",
+    "statusNote": "India won by 24 runs",
+    "scoringRule": {
+      "customWideNoBall": true
+    },
+    "toss": {
+      "winner": "team1",
+      "decision": "bat",
+      "completedAt": "2026-09-26T22:15:04.207Z"
+    },
+    "team1": {
+      "name": "India",
+      "shortName": "IND",
+      "color": "#1e40af",
+      "logo": "🇮🇳",
+      "players": [
+        {
+          "id": "ind_c_1",
+          "name": "Rohit Sharma",
+          "role": "batter"
+        },
+        {
+          "id": "ind_c_2",
+          "name": "Virat Kohli",
+          "role": "batter"
+        },
+        {
+          "id": "ind_c_3",
+          "name": "Jasprit Bumrah",
+          "role": "bowler"
+        }
+      ]
+    },
+    "team2": {
+      "name": "England",
+      "shortName": "ENG",
+      "color": "#dc2626",
+      "logo": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "players": [
+        {
+          "id": "eng_c_1",
+          "name": "Jos Buttler",
+          "role": "wicketkeeper"
+        },
+        {
+          "id": "eng_c_2",
+          "name": "Phil Salt",
+          "role": "batter"
+        },
+        {
+          "id": "eng_c_3",
+          "name": "Jofra Archer",
+          "role": "bowler"
+        }
+      ]
+    },
+    "currentInningsIndex": 1,
+    "innings": [
+      {
+        "inningsNumber": 1,
+        "battingTeam": "team1",
+        "bowlingTeam": "team2",
+        "totalRuns": 192,
+        "totalWickets": 4,
+        "totalOvers": 20,
+        "legalBalls": 120,
+        "isCompleted": true,
+        "extras": {
+          "wides": 4,
+          "wideRuns": 0,
+          "noBalls": 0,
+          "noBallRuns": 0,
+          "byes": 1,
+          "legByes": 2,
+          "totalExtras": 7
+        },
+        "batsmen": [
+          {
+            "playerId": "ind_c_1",
+            "name": "Rohit Sharma",
+            "runs": 76,
+            "balls": 42,
+            "fours": 7,
+            "sixes": 4,
+            "strikeRate": 180.95,
+            "isOut": true,
+            "dismissal": "c Buttler b Archer",
+            "dismissalType": "caught",
+            "battingOrder": 1
+          },
+          {
+            "playerId": "ind_c_2",
+            "name": "Virat Kohli",
+            "runs": 82,
+            "balls": 54,
+            "fours": 8,
+            "sixes": 3,
+            "strikeRate": 151.85,
+            "isOut": false,
+            "dismissal": "not out",
+            "dismissalType": "not_out",
+            "battingOrder": 2
+          }
+        ],
+        "bowlers": [
+          {
+            "playerId": "eng_c_3",
+            "name": "Jofra Archer",
+            "overs": 4,
+            "legalBalls": 24,
+            "maidens": 0,
+            "runsConceded": 38,
+            "wickets": 2,
+            "economy": 9.5,
+            "noBalls": 0,
+            "wides": 1,
+            "isCurrentBowler": false
+          }
+        ],
+        "overs": [],
+        "fallOfWickets": [
+          {
+            "wicketNumber": 1,
+            "batsmanName": "Rohit Sharma",
+            "score": 110,
+            "overs": 11.4
+          }
+        ]
+      },
+      {
+        "inningsNumber": 2,
+        "battingTeam": "team2",
+        "bowlingTeam": "team1",
+        "totalRuns": 168,
+        "totalWickets": 8,
+        "totalOvers": 20,
+        "legalBalls": 120,
+        "isCompleted": true,
+        "extras": {
+          "wides": 2,
+          "wideRuns": 0,
+          "noBalls": 1,
+          "noBallRuns": 2,
+          "byes": 0,
+          "legByes": 1,
+          "totalExtras": 5
+        },
+        "batsmen": [
+          {
+            "playerId": "eng_c_1",
+            "name": "Jos Buttler",
+            "runs": 53,
+            "balls": 31,
+            "fours": 5,
+            "sixes": 2,
+            "strikeRate": 170.96,
+            "isOut": true,
+            "dismissal": "b Bumrah",
+            "dismissalType": "bowled",
+            "battingOrder": 1
+          },
+          {
+            "playerId": "eng_c_2",
+            "name": "Phil Salt",
+            "runs": 34,
+            "balls": 22,
+            "fours": 4,
+            "sixes": 1,
+            "strikeRate": 154.54,
+            "isOut": true,
+            "dismissal": "c Kohli b Bumrah",
+            "dismissalType": "caught",
+            "battingOrder": 2
+          }
+        ],
+        "bowlers": [
+          {
+            "playerId": "ind_c_3",
+            "name": "Jasprit Bumrah",
+            "overs": 4,
+            "legalBalls": 24,
+            "maidens": 1,
+            "runsConceded": 19,
+            "wickets": 4,
+            "economy": 4.75,
+            "noBalls": 0,
+            "wides": 0,
+            "isCurrentBowler": false
+          }
+        ],
+        "overs": [],
+        "fallOfWickets": []
+      }
+    ],
+    "_id": "2efabe10-58ef-4d90-8bc9-bdc278e034a1",
+    "createdAt": "2026-09-28T22:15:04.219Z",
+    "updatedAt": "2026-09-28T22:15:04.219Z"
+  },
+  {
+    "title": "Final - ICC Men's T20 World Cup 2026",
+    "matchType": "T20",
+    "totalOvers": 20,
+    "venue": "Melbourne Cricket Ground, Melbourne",
+    "date": "2026-09-28T22:15:04.207Z",
+    "status": "live",
+    "statusNote": "India won the toss and elected to bat - Match is LIVE!",
+    "scoringRule": {
+      "customWideNoBall": true
+    },
+    "toss": {
+      "winner": "team1",
+      "decision": "bat",
+      "completedAt": "2026-09-28T21:30:04.207Z",
+      "liveAt": "2026-09-28T21:31:04.207Z"
+    },
+    "team1": {
+      "name": "India",
+      "shortName": "IND",
+      "color": "#1e40af",
+      "logo": "🇮🇳",
+      "players": [
+        {
+          "id": "ind_1",
+          "name": "Rohit Sharma",
+          "role": "batter",
+          "isCaptain": true,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "ind_2",
+          "name": "Virat Kohli",
+          "role": "batter",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "ind_3",
+          "name": "Suryakumar Yadav",
+          "role": "batter",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "ind_4",
+          "name": "Rishabh Pant",
+          "role": "wicketkeeper",
+          "isCaptain": false,
+          "isWicketKeeper": true
+        },
+        {
+          "id": "ind_5",
+          "name": "Hardik Pandya",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "ind_6",
+          "name": "Shivam Dube",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "ind_7",
+          "name": "Ravindra Jadeja",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "ind_8",
+          "name": "Axar Patel",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "ind_9",
+          "name": "Kuldeep Yadav",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "ind_10",
+          "name": "Jasprit Bumrah",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "ind_11",
+          "name": "Arshdeep Singh",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        }
+      ]
+    },
+    "team2": {
+      "name": "Australia",
+      "shortName": "AUS",
+      "color": "#eab308",
+      "logo": "🇦🇺",
+      "players": [
+        {
+          "id": "aus_1",
+          "name": "Travis Head",
+          "role": "batter",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "aus_2",
+          "name": "David Warner",
+          "role": "batter",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "aus_3",
+          "name": "Mitchell Marsh",
+          "role": "all_rounder",
+          "isCaptain": true,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "aus_4",
+          "name": "Glenn Maxwell",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "aus_5",
+          "name": "Marcus Stoinis",
+          "role": "all_rounder",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "aus_6",
+          "name": "Tim David",
+          "role": "batter",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "aus_7",
+          "name": "Matthew Wade",
+          "role": "wicketkeeper",
+          "isCaptain": false,
+          "isWicketKeeper": true
+        },
+        {
+          "id": "aus_8",
+          "name": "Pat Cummins",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "aus_9",
+          "name": "Mitchell Starc",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "aus_10",
+          "name": "Adam Zampa",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        },
+        {
+          "id": "aus_11",
+          "name": "Josh Hazlewood",
+          "role": "bowler",
+          "isCaptain": false,
+          "isWicketKeeper": false
+        }
+      ]
+    },
+    "currentInningsIndex": 0,
+    "innings": [
+      {
+        "inningsNumber": 1,
+        "battingTeam": "team1",
+        "bowlingTeam": "team2",
+        "totalRuns": 152,
+        "totalWickets": 2,
+        "totalOvers": 14.3,
+        "legalBalls": 87,
+        "isCompleted": false,
+        "extras": {
+          "wides": 4,
+          "wideRuns": 0,
+          "noBalls": 2,
+          "noBallRuns": 8,
+          "byes": 0,
+          "legByes": 2,
+          "totalExtras": 10
+        },
+        "batsmen": [
+          {
+            "playerId": "ind_1",
+            "name": "Rohit Sharma",
+            "runs": 57,
+            "balls": 34,
+            "fours": 6,
+            "sixes": 3,
+            "strikeRate": 167.65,
+            "isOut": true,
+            "dismissal": "c Maxwell b Starc",
+            "dismissalType": "caught",
+            "bowlerId": "aus_9",
+            "fielderName": "Glenn Maxwell",
+            "battingOrder": 1,
+            "isCurrentStriker": false,
+            "isCurrentNonStriker": false
+          },
+          {
+            "playerId": "ind_2",
+            "name": "Virat Kohli",
+            "runs": 52,
+            "balls": 33,
+            "fours": 5,
+            "sixes": 2,
+            "strikeRate": 157.58,
+            "isOut": false,
+            "dismissal": "not out",
+            "dismissalType": "not_out",
+            "bowlerId": "",
+            "fielderName": "",
+            "battingOrder": 2,
+            "isCurrentStriker": true,
+            "isCurrentNonStriker": false
+          },
+          {
+            "playerId": "ind_3",
+            "name": "Suryakumar Yadav",
+            "runs": 18,
+            "balls": 9,
+            "fours": 2,
+            "sixes": 1,
+            "strikeRate": 200,
+            "isOut": true,
+            "dismissal": "b Cummins",
+            "dismissalType": "bowled",
+            "bowlerId": "aus_8",
+            "fielderName": "",
+            "battingOrder": 3,
+            "isCurrentStriker": false,
+            "isCurrentNonStriker": false
+          },
+          {
+            "playerId": "ind_4",
+            "name": "Rishabh Pant",
+            "runs": 23,
+            "balls": 12,
+            "fours": 3,
+            "sixes": 1,
+            "strikeRate": 191.67,
+            "isOut": false,
+            "dismissal": "not out",
+            "dismissalType": "not_out",
+            "bowlerId": "",
+            "fielderName": "",
+            "battingOrder": 4,
+            "isCurrentStriker": false,
+            "isCurrentNonStriker": true
+          },
+          {
+            "playerId": "ind_5",
+            "name": "Hardik Pandya",
+            "runs": 0,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "strikeRate": 0,
+            "isOut": false,
+            "dismissal": "yet to bat",
+            "dismissalType": "not_out",
+            "battingOrder": 5,
+            "isCurrentStriker": false,
+            "isCurrentNonStriker": false
+          },
+          {
+            "playerId": "ind_6",
+            "name": "Shivam Dube",
+            "runs": 0,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "strikeRate": 0,
+            "isOut": false,
+            "dismissal": "yet to bat",
+            "dismissalType": "not_out",
+            "battingOrder": 6,
+            "isCurrentStriker": false,
+            "isCurrentNonStriker": false
+          },
+          {
+            "playerId": "ind_7",
+            "name": "Ravindra Jadeja",
+            "runs": 0,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "strikeRate": 0,
+            "isOut": false,
+            "dismissal": "yet to bat",
+            "dismissalType": "not_out",
+            "battingOrder": 7,
+            "isCurrentStriker": false,
+            "isCurrentNonStriker": false
+          },
+          {
+            "playerId": "ind_8",
+            "name": "Axar Patel",
+            "runs": 0,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "strikeRate": 0,
+            "isOut": false,
+            "dismissal": "yet to bat",
+            "dismissalType": "not_out",
+            "battingOrder": 8,
+            "isCurrentStriker": false,
+            "isCurrentNonStriker": false
+          },
+          {
+            "playerId": "ind_9",
+            "name": "Kuldeep Yadav",
+            "runs": 0,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "strikeRate": 0,
+            "isOut": false,
+            "dismissal": "yet to bat",
+            "dismissalType": "not_out",
+            "battingOrder": 9,
+            "isCurrentStriker": false,
+            "isCurrentNonStriker": false
+          },
+          {
+            "playerId": "ind_10",
+            "name": "Jasprit Bumrah",
+            "runs": 0,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "strikeRate": 0,
+            "isOut": false,
+            "dismissal": "yet to bat",
+            "dismissalType": "not_out",
+            "battingOrder": 10,
+            "isCurrentStriker": false,
+            "isCurrentNonStriker": false
+          },
+          {
+            "playerId": "ind_11",
+            "name": "Arshdeep Singh",
+            "runs": 0,
+            "balls": 0,
+            "fours": 0,
+            "sixes": 0,
+            "strikeRate": 0,
+            "isOut": false,
+            "dismissal": "yet to bat",
+            "dismissalType": "not_out",
+            "battingOrder": 11,
+            "isCurrentStriker": false,
+            "isCurrentNonStriker": false
+          }
+        ],
+        "bowlers": [
+          {
+            "playerId": "aus_9",
+            "name": "Mitchell Starc",
+            "overs": 3,
+            "legalBalls": 18,
+            "maidens": 0,
+            "runsConceded": 28,
+            "wickets": 1,
+            "economy": 9.33,
+            "noBalls": 0,
+            "wides": 1,
+            "isCurrentBowler": false
+          },
+          {
+            "playerId": "aus_11",
+            "name": "Josh Hazlewood",
+            "overs": 3,
+            "legalBalls": 18,
+            "maidens": 0,
+            "runsConceded": 24,
+            "wickets": 0,
+            "economy": 8,
+            "noBalls": 0,
+            "wides": 1,
+            "isCurrentBowler": false
+          },
+          {
+            "playerId": "aus_8",
+            "name": "Pat Cummins",
+            "overs": 3,
+            "legalBalls": 18,
+            "maidens": 0,
+            "runsConceded": 31,
+            "wickets": 1,
+            "economy": 10.33,
+            "noBalls": 0,
+            "wides": 0,
+            "isCurrentBowler": false
+          },
+          {
+            "playerId": "aus_10",
+            "name": "Adam Zampa",
+            "overs": 3,
+            "legalBalls": 18,
+            "maidens": 0,
+            "runsConceded": 33,
+            "wickets": 0,
+            "economy": 11,
+            "noBalls": 0,
+            "wides": 1,
+            "isCurrentBowler": false
+          },
+          {
+            "playerId": "aus_4",
+            "name": "Glenn Maxwell",
+            "overs": 2.3,
+            "legalBalls": 15,
+            "maidens": 0,
+            "runsConceded": 30,
+            "wickets": 0,
+            "economy": 12,
+            "noBalls": 2,
+            "wides": 1,
+            "isCurrentBowler": true
+          }
+        ],
+        "overs": [
+          {
+            "overNumber": 13,
+            "bowlerId": "aus_10",
+            "bowlerName": "Adam Zampa",
+            "runsInOver": 12,
+            "wicketsInOver": 0,
+            "balls": [
+              {
+                "ballId": "b_13_1",
+                "ballNumberInOver": 1,
+                "legalBallNumber": 73,
+                "outcome": "1",
+                "runs": 1,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "Zampa to Pant, 1 run, pushed down to long off.",
+                "strikerName": "Rishabh Pant",
+                "bowlerName": "Adam Zampa",
+                "timestamp": "2026-09-28T22:09:04.207Z"
+              },
+              {
+                "ballId": "b_13_2",
+                "ballNumberInOver": 2,
+                "legalBallNumber": 74,
+                "outcome": "4",
+                "runs": 4,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "FOUR! Smashed wide of mid-wicket! Kohli in top gear.",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Adam Zampa",
+                "timestamp": "2026-09-28T22:10:04.207Z"
+              },
+              {
+                "ballId": "b_13_3",
+                "ballNumberInOver": 3,
+                "legalBallNumber": 75,
+                "outcome": "0",
+                "runs": 0,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "Zampa to Kohli, dot ball, leg break defended.",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Adam Zampa",
+                "timestamp": "2026-09-28T22:11:04.207Z"
+              },
+              {
+                "ballId": "b_13_4",
+                "ballNumberInOver": 4,
+                "legalBallNumber": 76,
+                "outcome": "Wd",
+                "runs": 0,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": true,
+                "isNoBall": false,
+                "commentary": "Wide ball outside off stump (0 extra runs added under custom rule).",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Adam Zampa",
+                "timestamp": "2026-09-28T22:11:04.207Z"
+              },
+              {
+                "ballId": "b_13_5",
+                "ballNumberInOver": 5,
+                "legalBallNumber": 76,
+                "outcome": "1",
+                "runs": 1,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "Zampa to Kohli, 1 run, tapped into the covers.",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Adam Zampa",
+                "timestamp": "2026-09-28T22:12:04.207Z"
+              },
+              {
+                "ballId": "b_13_6",
+                "ballNumberInOver": 6,
+                "legalBallNumber": 77,
+                "outcome": "6",
+                "runs": 6,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "SIX! Pant deposits this clean into the deep mid-wicket terrace!",
+                "strikerName": "Rishabh Pant",
+                "bowlerName": "Adam Zampa",
+                "timestamp": "2026-09-28T22:12:04.207Z"
+              }
+            ]
+          },
+          {
+            "overNumber": 14,
+            "bowlerId": "aus_8",
+            "bowlerName": "Pat Cummins",
+            "runsInOver": 11,
+            "wicketsInOver": 0,
+            "balls": [
+              {
+                "ballId": "b_14_1",
+                "ballNumberInOver": 1,
+                "legalBallNumber": 79,
+                "outcome": "2",
+                "runs": 2,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "Cummins to Pant, 2 runs, nudged behind square.",
+                "strikerName": "Rishabh Pant",
+                "bowlerName": "Pat Cummins",
+                "timestamp": "2026-09-28T22:13:04.207Z"
+              },
+              {
+                "ballId": "b_14_2",
+                "ballNumberInOver": 2,
+                "legalBallNumber": 80,
+                "outcome": "1",
+                "runs": 1,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "1 run, guided towards backward point.",
+                "strikerName": "Rishabh Pant",
+                "bowlerName": "Pat Cummins",
+                "timestamp": "2026-09-28T22:13:04.207Z"
+              },
+              {
+                "ballId": "b_14_3",
+                "ballNumberInOver": 3,
+                "legalBallNumber": 81,
+                "outcome": "4",
+                "runs": 4,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "FOUR! Vintage Kohli cover drive, pure perfection!",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Pat Cummins",
+                "timestamp": "2026-09-28T22:13:34.207Z"
+              },
+              {
+                "ballId": "b_14_4",
+                "ballNumberInOver": 4,
+                "legalBallNumber": 82,
+                "outcome": "0",
+                "runs": 0,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "Dot ball, good bouncer by Cummins.",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Pat Cummins",
+                "timestamp": "2026-09-28T22:13:49.207Z"
+              },
+              {
+                "ballId": "b_14_5",
+                "ballNumberInOver": 5,
+                "legalBallNumber": 83,
+                "outcome": "2",
+                "runs": 2,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "Kohli clips it off his pads for a comfortable brace.",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Pat Cummins",
+                "timestamp": "2026-09-28T22:14:04.207Z"
+              },
+              {
+                "ballId": "b_14_6",
+                "ballNumberInOver": 6,
+                "legalBallNumber": 84,
+                "outcome": "2",
+                "runs": 2,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "Kohli punches through extra cover, keeps the strike.",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Pat Cummins",
+                "timestamp": "2026-09-28T22:14:19.207Z"
+              }
+            ]
+          },
+          {
+            "overNumber": 15,
+            "bowlerId": "aus_4",
+            "bowlerName": "Glenn Maxwell",
+            "runsInOver": 13,
+            "wicketsInOver": 0,
+            "balls": [
+              {
+                "ballId": "b_15_1",
+                "ballNumberInOver": 1,
+                "legalBallNumber": 85,
+                "outcome": "Nb4",
+                "runs": 4,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": true,
+                "commentary": "NO BALL! Oversteps, and Kohli punches it for FOUR! Free hit next ball.",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Glenn Maxwell",
+                "timestamp": "2026-09-28T22:14:34.207Z"
+              },
+              {
+                "ballId": "b_15_2",
+                "ballNumberInOver": 2,
+                "legalBallNumber": 85,
+                "outcome": "4",
+                "runs": 4,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "FREE HIT! Kohli swings hard and dispatches it over mid-off for FOUR!",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Glenn Maxwell",
+                "timestamp": "2026-09-28T22:14:44.207Z"
+              },
+              {
+                "ballId": "b_15_3",
+                "ballNumberInOver": 3,
+                "legalBallNumber": 86,
+                "outcome": "1",
+                "runs": 1,
+                "extraRuns": 0,
+                "isWicket": false,
+                "isWide": false,
+                "isNoBall": false,
+                "commentary": "Maxwell to Kohli, 1 run, driven to long-on.",
+                "strikerName": "Virat Kohli",
+                "bowlerName": "Glenn Maxwell",
+                "timestamp": "2026-09-28T22:14:54.207Z"
+              },
+              {
+                "ballId": "756242a3-cf9d-41ce-b816-5a2e2f994e9b",
+                "ballNumberInOver": 4,
+                "legalBallNumber": 87,
+                "outcome": "Wd",
+                "runs": 0,
+                "extraRuns": 0,
+                "isWicket": false,
+                "wicketDetail": null,
+                "isWide": true,
+                "isNoBall": false,
+                "isBye": false,
+                "isLegBye": false,
+                "commentary": "Wide ball from Glenn Maxwell. Fired well outside the tramlines.",
+                "strikerName": "Virat Kohli",
+                "nonStrikerName": "Rishabh Pant",
+                "bowlerName": "Glenn Maxwell",
+                "timestamp": "2026-09-28T22:15:42.726Z"
+              },
+              {
+                "ballId": "195a8e83-a695-4eef-b761-f7c39ca688cf",
+                "ballNumberInOver": 5,
+                "legalBallNumber": 87,
+                "outcome": "Nb+4",
+                "runs": 4,
+                "extraRuns": 0,
+                "isWicket": false,
+                "wicketDetail": null,
+                "isWide": false,
+                "isNoBall": true,
+                "isBye": false,
+                "isLegBye": false,
+                "commentary": "FOUR! Glorious stroke by Virat Kohli, finds the gap to perfection!",
+                "strikerName": "Virat Kohli",
+                "nonStrikerName": "Rishabh Pant",
+                "bowlerName": "Glenn Maxwell",
+                "timestamp": "2026-09-28T22:15:42.756Z"
+              }
+            ]
+          }
+        ],
+        "fallOfWickets": [
+          {
+            "wicketNumber": 1,
+            "batsmanName": "Rohit Sharma",
+            "score": 84,
+            "overs": 8.4
+          },
+          {
+            "wicketNumber": 2,
+            "batsmanName": "Suryakumar Yadav",
+            "score": 114,
+            "overs": 11.2
+          }
+        ],
+        "partnership": {
+          "runs": 34,
+          "balls": 19
+        }
+      }
+    ],
+    "liveEvent": {
+      "type": "FOUR",
+      "text": "CRACKING FOUR! 🏏 Beautiful shot by Virat Kohli!",
+      "timestamp": "2026-09-28T22:15:42.756Z"
+    },
+    "_id": "929a276a-2fde-4914-bccb-1c7b48f39b57",
+    "createdAt": "2026-09-28T22:15:04.210Z",
+    "updatedAt": "2026-09-28T22:15:42.758Z"
+  }
+]
