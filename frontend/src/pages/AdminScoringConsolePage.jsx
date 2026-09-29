@@ -12,6 +12,10 @@ export default function AdminScoringConsolePage() {
   const [match, setMatch] = useState(null);
   const [loading, setLoading] = useState(true);
   const [scoring, setScoring] = useState(false);
+  const [bowlerChangeRequired, setBowlerChangeRequired] = useState(false);
+
+  // After an over is completed, admin must manually select a new bowler.
+  const [bowlerChangeRequired, setBowlerChangeRequired] = useState(false);
 
   // Crease selections
   const [selectedStrikerId, setSelectedStrikerId] = useState('');
@@ -40,18 +44,38 @@ export default function AdminScoringConsolePage() {
         setMatch(m);
 
         // Pre-select active striker, non-striker, bowler
-        const currInnings = m.innings?.[m.currentInningsIndex || 0];
-        if (currInnings) {
-          const striker = currInnings.batsmen.find(b => b.isCurrentStriker && !b.isOut) ||
-                          currInnings.batsmen.find(b => !b.isOut);
-          const nonStriker = currInnings.batsmen.find(b => b.isCurrentNonStriker && !b.isOut) ||
-                             currInnings.batsmen.filter(b => !b.isOut && b.playerId !== striker?.playerId)[0];
-          const bowler = currInnings.bowlers.find(b => b.isCurrentBowler) || currInnings.bowlers[0];
+       // Restore ONLY the players saved by backend.
+// Do NOT automatically select first available player.
+const currInnings = m.innings?.[m.currentInningsIndex || 0];
 
-          if (striker) setSelectedStrikerId(striker.playerId);
-          if (nonStriker) setSelectedNonStrikerId(nonStriker.playerId);
-          if (bowler) setSelectedBowlerId(bowler.playerId);
-        }
+if (currInnings) {
+  const striker = currInnings.batsmen.find(
+    b => b.isCurrentStriker && !b.isOut
+  );
+
+  const nonStriker = currInnings.batsmen.find(
+    b => b.isCurrentNonStriker && !b.isOut
+  );
+
+  const bowler = currInnings.bowlers.find(
+    b => b.isCurrentBowler
+  );
+
+  if (striker) {
+    setSelectedStrikerId(striker.playerId);
+  }
+
+  if (nonStriker) {
+    setSelectedNonStrikerId(nonStriker.playerId);
+  }
+
+  if (bowler) {
+    setSelectedBowlerId(bowler.playerId);
+  } else {
+    // No active bowler means admin must select one.
+    setSelectedBowlerId('');
+  }
+}
       }
     } catch (err) {
       console.error('Error fetching match:', err);
@@ -85,17 +109,40 @@ export default function AdminScoringConsolePage() {
   }, [socket, id]);
 
   const handleApplyCrease = async () => {
-    try {
-      await api.post(`/matches/${id}/set-crease`, {
-        strikerId: selectedStrikerId,
-        nonStrikerId: selectedNonStrikerId,
-        bowlerId: selectedBowlerId
-      });
-      fetchMatch();
-    } catch (err) {
-      alert('Error setting crease players: ' + (err.response?.data?.message || err.message));
-    }
-  };
+  if (!selectedStrikerId || !selectedNonStrikerId) {
+    alert('Please select Striker and Non-Striker.');
+    return;
+  }
+
+  if (selectedStrikerId === selectedNonStrikerId) {
+    alert('Striker and Non-Striker must be different.');
+    return;
+  }
+
+  if (!selectedBowlerId) {
+    alert('Please select the Bowler.');
+    return;
+  }
+
+  try {
+    await api.post(`/matches/${id}/set-crease`, {
+      strikerId: selectedStrikerId,
+      nonStrikerId: selectedNonStrikerId,
+      bowlerId: selectedBowlerId
+    });
+
+    setBowlerChangeRequired(false);
+
+    // Reload saved backend state.
+    await fetchMatch();
+
+  } catch (err) {
+    alert(
+      'Error setting crease players: ' +
+      (err.response?.data?.message || err.message)
+    );
+  }
+};
 
   const handleSwapStrike = async () => {
     const temp = selectedStrikerId;
@@ -115,9 +162,25 @@ export default function AdminScoringConsolePage() {
   };
 
   // Record a Ball
-  const handleScoreBall = async (ballConfig) => {
-    if (scoring) return;
-    setScoring(true);
+ const handleScoreBall = async (ballConfig) => {
+  if (scoring) return;
+
+  if (!selectedStrikerId || !selectedNonStrikerId) {
+    alert('Please select Striker and Non-Striker.');
+    return;
+  }
+
+  if (!selectedBowlerId) {
+    alert('Over completed. Please select the next Bowler first.');
+    return;
+  }
+
+  if (selectedStrikerId === selectedNonStrikerId) {
+    alert('Striker and Non-Striker cannot be the same player.');
+    return;
+  }
+
+  setScoring(true);
 
     try {
       const payload = {
@@ -135,16 +198,22 @@ export default function AdminScoringConsolePage() {
         setExtraBatRuns(0);
 
         // Check if over was completed
-        if (res.data.isOverCompleted) {
-          // Alert admin to pick new bowler
-          const updatedMatch = res.data.match;
-          const currInn = updatedMatch.innings[updatedMatch.currentInningsIndex || 0];
-          // Suggest another bowler
-          const otherBowler = currInn.bowlers.find(b => b.playerId !== selectedBowlerId);
-          if (otherBowler) setSelectedBowlerId(otherBowler.playerId);
-        }
+        // Check if over was completed
+    if (res.data.isOverCompleted) {
 
-        fetchMatch();
+  // IMPORTANT:
+  // Do NOT automatically choose another bowler.
+  // Admin must manually select the next bowler.
+
+  setSelectedBowlerId('');
+  setBowlerChangeRequired(true);
+}
+
+// Do NOT immediately call fetchMatch() here.
+// The response already contains the updated match.
+if (res.data.match) {
+  setMatch(res.data.match);
+}
       } else {
         alert('Error: ' + res.data?.message);
       }
@@ -400,16 +469,27 @@ export default function AdminScoringConsolePage() {
             </div>
 
             {/* Bowler */}
-            <div className="bg-slate-900/60 p-3 rounded-xl border border-amber-500/30">
-              <label className="block text-[11px] font-bold uppercase text-amber-400 mb-1 flex items-center justify-between">
+             {/* Bowler */}
+             <div className="bg-slate-900/60 p-3 rounded-xl border border-amber-500/30">
+
+              {bowlerChangeRequired && (
+              <div className="mb-2 p-2 rounded-lg bg-amber-500/10 border border-amber-500/40 text-amber-300 text-xs font-bold">
+               Over completed — Please select the next Bowler.
+              </div>
+               )}
+
+                <label className="block text-[11px] font-bold uppercase text-amber-400 mb-1 flex items-center justify-between">
                 <span>Active Bowler</span>
                 {currentBowlerObj && (
                   <span className="text-white font-mono">{currentBowlerObj.wickets}/{currentBowlerObj.runsConceded} ({currentBowlerObj.overs} ov)</span>
                 )}
               </label>
-              <select
-                value={selectedBowlerId}
-                onChange={(e) => setSelectedBowlerId(e.target.value)}
+               <select
+                 value={selectedBowlerId}
+                onChange={(e) => {
+                  setSelectedBowlerId(e.target.value);
+                  setBowlerChangeRequired(false);
+                }}
                 className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white font-bold cursor-pointer appearance-auto"
               >
                 {currentInnings?.bowlers.map((b) => (
