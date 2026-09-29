@@ -365,7 +365,7 @@ export default function AdminScoringConsolePage() {
               <select
                 value={selectedStrikerId}
                 onChange={(e) => setSelectedStrikerId(e.target.value)}
-                className="w-full bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white font-bold"
+                className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white font-bold cursor-pointer appearance-auto"
               >
                 {availableBatters.map((b) => (
                   <option key={b.playerId} value={b.playerId}>
@@ -386,7 +386,7 @@ export default function AdminScoringConsolePage() {
               <select
                 value={selectedNonStrikerId}
                 onChange={(e) => setSelectedNonStrikerId(e.target.value)}
-                className="w-full bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white font-bold"
+                className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white font-bold cursor-pointer appearance-auto"
               >
                 {availableBatters.map((b) => (
                   <option key={b.playerId} value={b.playerId}>
@@ -407,7 +407,7 @@ export default function AdminScoringConsolePage() {
               <select
                 value={selectedBowlerId}
                 onChange={(e) => setSelectedBowlerId(e.target.value)}
-                className="w-full bg-slate-800 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white font-bold"
+                className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white font-bold cursor-pointer appearance-auto"
               >
                 {currentInnings?.bowlers.map((b) => (
                   <option key={b.playerId} value={b.playerId}>
