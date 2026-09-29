@@ -368,9 +368,11 @@ export default function AdminScoringConsolePage() {
                 className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white font-bold cursor-pointer appearance-auto"
               >
                 {availableBatters.map((b) => (
-                  <option key={b.playerId} value={b.playerId}>
-                    {b.name} ({b.runs}r, {b.balls}b)
-                  </option>
+                  <option
+                    key={b.playerId}
+                    value={b.playerId}
+                    className="bg-slate-800 text-white"
+                    >
                 ))}
               </select>
             </div>
