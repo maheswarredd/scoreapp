@@ -371,8 +371,9 @@ export default function AdminScoringConsolePage() {
                   <option
                     key={b.playerId}
                     value={b.playerId}
-                    className="bg-slate-800 text-white"
-                    >
+                    className="bg-slate-800 text-white">
+                    {b.name} ({b.runs}r, {b.balls}b)
+                  </option>
                 ))}
               </select>
             </div>
