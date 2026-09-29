@@ -157,7 +157,15 @@ const createMatch = async (req, res) => {
         logo: team2.logo || '',
         players: team2Players
       },
-      innings: [],
+      innings: [
+        createEmptyInnings(
+          1,
+          'team1',
+          'team2',
+          team1Players,
+          team2Players
+        )
+      ],
       currentInningsIndex: 0,
       liveEvent: {
         type: 'NONE',
