@@ -12,7 +12,6 @@ export default function AdminScoringConsolePage() {
   const [match, setMatch] = useState(null);
   const [loading, setLoading] = useState(true);
   const [scoring, setScoring] = useState(false);
-  const [bowlerChangeRequired, setBowlerChangeRequired] = useState(false);
 
   // After an over is completed, admin must manually select a new bowler.
   const [bowlerChangeRequired, setBowlerChangeRequired] = useState(false);
@@ -21,6 +20,9 @@ export default function AdminScoringConsolePage() {
   const [selectedStrikerId, setSelectedStrikerId] = useState('');
   const [selectedNonStrikerId, setSelectedNonStrikerId] = useState('');
   const [selectedBowlerId, setSelectedBowlerId] = useState('');
+  // Bowler locked for the current over.
+// This will NOT change until the over is completed.
+const [overBowlerId, setOverBowlerId] = useState('');
 
   // Commentary
   const [customCommentary, setCustomCommentary] = useState('');
@@ -71,9 +73,16 @@ if (currInnings) {
 
   if (bowler) {
     setSelectedBowlerId(bowler.playerId);
+     // Lock this bowler for the current over.
+  setOverBowlerId(bowler.playerId);
+
+  setBowlerChangeRequired(false);
   } else {
     // No active bowler means admin must select one.
-    setSelectedBowlerId('');
+     // Admin must manually select next bowler.
+  setSelectedBowlerId('');
+  setOverBowlerId('');
+  setBowlerChangeRequired(true);
   }
 }
       }
@@ -130,7 +139,10 @@ if (currInnings) {
       nonStrikerId: selectedNonStrikerId,
       bowlerId: selectedBowlerId
     });
-
+     // IMPORTANT:
+    // Lock this bowler for the complete over.
+    setOverBowlerId(selectedBowlerId);
+    // Over is now active.
     setBowlerChangeRequired(false);
 
     // Reload saved backend state.
@@ -170,9 +182,12 @@ if (currInnings) {
     return;
   }
 
-  if (!selectedBowlerId) {
-    alert('Over completed. Please select the next Bowler first.');
-    return;
+  const activeBowlerId = overBowlerId || selectedBowlerId;
+
+  if (!activeBowlerId) {
+   alert('Please select the Bowler before recording the ball.');
+   return;
+   }
   }
 
   if (selectedStrikerId === selectedNonStrikerId) {
@@ -183,13 +198,19 @@ if (currInnings) {
   setScoring(true);
 
     try {
-      const payload = {
-        strikerId: selectedStrikerId,
-        nonStrikerId: selectedNonStrikerId,
-        bowlerId: selectedBowlerId,
-        customCommentary,
-        ...ballConfig
-      };
+      const activeBowlerId = overBowlerId || selectedBowlerId;
+
+     const payload = {
+     strikerId: selectedStrikerId,
+     nonStrikerId: selectedNonStrikerId,
+
+     // IMPORTANT:
+     // Always use the bowler locked for this over.
+     bowlerId: activeBowlerId,
+
+     customCommentary,
+     ...ballConfig
+     };
 
       const res = await api.post(`/matches/${id}/score-ball`, payload);
       if (res.data?.success) {
