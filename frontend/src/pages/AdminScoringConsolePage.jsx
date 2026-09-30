@@ -206,7 +206,7 @@ if (currInnings) {
   // Admin must manually select the next bowler.
 
   setSelectedBowlerId('');
-  setBowlerChangeRequired(true);
+  setBowlerChangeRequired(false);
 }
 
 // Do NOT immediately call fetchMatch() here.
