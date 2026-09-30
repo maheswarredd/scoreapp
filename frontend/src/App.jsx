@@ -74,15 +74,67 @@ export default function App() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-crex-border bg-[#0a0e1a] py-6 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center space-x-2">
-            <span className="font-extrabold text-blue-500">CREX</span>
-            <span>• Cricket Exchange Live Score Engine</span>
-          </div>
-          <p>© 2026 CREX Live Score Clone. All rights reserved.</p>
-        </div>
-      </footer>
+      {/* Footer */}
+<footer className="border-t border-crex-border bg-[#0a0e1a] py-6 text-center text-xs text-slate-500">
+  <div className="max-w-7xl mx-auto px-4 flex flex-col gap-4">
+
+    {/* Main Footer Line */}
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+      <span className="font-extrabold text-blue-500">
+        CREX
+      </span>
+
+      <span>• Sunday Match Live Score Engine</span>
+
+      <span className="hidden sm:inline">•</span>
+
+      <span className="font-semibold text-slate-300">
+        Developed by
+        <span className="ml-1 text-blue-400 font-extrabold">
+          Reddy
+        </span>
+      </span>
+    </div>
+
+    {/* Social Links */}
+    <div className="flex flex-wrap items-center justify-center gap-3">
+
+      <a
+        href="https://www.instagram.com/maheswar_reddy__18/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-3 py-1.5 rounded-lg bg-pink-500/10 border border-pink-500/30 text-pink-400 font-semibold hover:bg-pink-500/20 hover:border-pink-400 transition-all"
+      >
+        Instagram: @maheswar_reddy__18
+      </a>
+
+      <a
+        href="https://www.facebook.com/maheswarreddy"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-3 py-1.5 rounded-lg bg-blue-500/10 border border-blue-500/30 text-blue-400 font-semibold hover:bg-blue-500/20 hover:border-blue-400 transition-all"
+      >
+        Facebook: maheswarreddy
+      </a>
+
+      <a
+        href="https://github.com/ReddyDeveloper"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-3 py-1.5 rounded-lg bg-slate-500/10 border border-slate-500/30 text-slate-300 font-semibold hover:bg-slate-500/20 hover:border-slate-400 transition-all"
+      >
+        GitHub: ReddyDeveloper
+      </a>
+
+    </div>
+
+    {/* Copyright */}
+    <p>
+      © 2026 CREX Live Score Clone. All rights reserved By Reddy.
+    </p>
+
+  </div>
+</footer>
     </div>
   );
 }
