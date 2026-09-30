@@ -227,6 +227,8 @@ if (currInnings) {
   // Admin must manually select the next bowler.
 
   setSelectedBowlerId('');
+   // Unlock bowler for the next over.
+  setOverBowlerId('');
   setBowlerChangeRequired(true);
 }
 
@@ -505,14 +507,25 @@ if (res.data.match) {
                   <span className="text-white font-mono">{currentBowlerObj.wickets}/{currentBowlerObj.runsConceded} ({currentBowlerObj.overs} ov)</span>
                 )}
               </label>
-               <select
+                <select
                  value={selectedBowlerId}
+                disabled={!!overBowlerId && !bowlerChangeRequired}
                 onChange={(e) => {
-                  setSelectedBowlerId(e.target.value);
-                  setBowlerChangeRequired(false);
+                const newBowlerId = e.target.value;
+
+                setSelectedBowlerId(newBowlerId);
+
+                // Selected manually for next over.
+                setOverBowlerId(newBowlerId);
+
+                setBowlerChangeRequired(false);
                 }}
-                className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white font-bold cursor-pointer appearance-auto"
-              >
+                className={`w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white font-bold appearance-auto ${
+                overBowlerId && !bowlerChangeRequired
+                ? 'opacity-60 cursor-not-allowed'
+                : 'cursor-pointer'
+                }`}
+                >
                 {currentInnings?.bowlers.map((b) => (
                   <option key={b.playerId} value={b.playerId}>
                     {b.name} ({b.wickets}w - {b.runsConceded}r - {b.overs}ov)
