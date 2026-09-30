@@ -61,15 +61,53 @@ const recordBall = async (req, res) => {
     if (!innings) {
       return res.status(400).json({ success: false, message: 'Active innings not found' });
     }
+    // Identify current striker and non-striker
+  const striker = innings.batsmen.find(
+    b => b.playerId === (
+    strikerId ||
+    innings.batsmen.find(x => x.isCurrentStriker)?.playerId
+   )
+   );
 
-    // Identify current striker, non-striker, bowler
-    const striker = innings.batsmen.find(b => b.playerId === (strikerId || (innings.batsmen.find(x => x.isCurrentStriker)?.playerId)));
-    const nonStriker = innings.batsmen.find(b => b.playerId === (nonStrikerId || (innings.batsmen.find(x => x.isCurrentNonStriker)?.playerId)));
-    const bowler = innings.bowlers.find(b => b.playerId === (bowlerId || (innings.bowlers.find(x => x.isCurrentBowler)?.playerId)));
+  const nonStriker = innings.batsmen.find(
+    b => b.playerId === (
+     nonStrikerId ||
+      innings.batsmen.find(x => x.isCurrentNonStriker)?.playerId
+     )
+    );
 
-    if (!striker || !bowler) {
-      return res.status(400).json({ success: false, message: 'Striker and Bowler must be selected' });
+  // IMPORTANT:
+   // Backend controls the active bowler.
+   // Do NOT allow a different bowler on every ball.
+  const currentBowler = innings.bowlers.find(
+   b => b.isCurrentBowler
+   );
+
+  if (!currentBowler) {
+   return res.status(400).json({
+    success: false,
+    message: 'Over completed. Please select the next bowler.'
+    });
     }
+
+  // If a bowler was sent from frontend, it MUST match
+  // the bowler already active for this over.
+  if (bowlerId && bowlerId !== currentBowler.playerId) {
+   return res.status(400).json({
+    success: false,
+    message: 'Bowler cannot be changed until the over is completed.'
+   });
+   }
+
+ const bowler = currentBowler;
+
+  if (!striker || !bowler) {
+    return res.status(400).json({
+    success: false,
+    message: 'Striker and Bowler must be selected'
+   });
+   }
+    
 
     // Determine legal delivery
     const isIllegal = isWide || isNoBall;
