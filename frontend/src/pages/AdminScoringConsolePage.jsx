@@ -492,7 +492,6 @@ if (res.data.match) {
             </div>
 
             {/* Bowler */}
-             {/* Bowler */}
              <div className="bg-slate-900/60 p-3 rounded-xl border border-amber-500/30">
 
               {bowlerChangeRequired && (
